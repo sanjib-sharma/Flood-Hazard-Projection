@@ -6,7 +6,7 @@ library(gdata)
 library(geosphere)
 library(ggplot2)
 # ---------------------------------------------------------------
-#load("flow projections")
+#load("svs6308/flow projections")
 #stations <- c('01553005','01551500') # Select stations to fit
 #pens <- 10                       # Penalty parameter
 #cprob <- c(0.90,0.95, 0.98, 0.99)     # Threshold quantiles to use
