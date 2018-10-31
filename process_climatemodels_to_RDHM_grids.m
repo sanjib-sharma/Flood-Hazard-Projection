@@ -3,7 +3,7 @@ clear all
 clc
 day_yr=[365 366 365 365 365 365 366 365 365 365 366 365];
 
- file='input climate_projection_lat_lon_common_grids.txt';
+ file='svs6308/input climate_projection_lat_lon_common_grids.txt';
           loc=importdata(file);
           grid_row=loc(:,1);
          
@@ -31,9 +31,9 @@ for year=2000:2000
     yyyy=num2str(year);
    
 
-filename1=['RCP4.5/',model,'/',yyyy,'/Extraction_pr.nc'];
-filename2=['RCP4.5/',model,'/',yyyy,'/Extraction_tasmax.nc'];
-filename3=['RCP4.5/',model,'/',yyyy,'/Extraction_tasmin.nc'];
+filename1=['svs6308/RCP4.5/',model,'/',yyyy,'/Extraction_pr.nc'];
+filename2=['svs6308/RCP4.5/',model,'/',yyyy,'/Extraction_tasmax.nc'];
+filename3=['svs6308/RCP4.5/',model,'/',yyyy,'/Extraction_tasmin.nc'];
 % nc1=cfdataset(filename1);
 % nc2=cfdataset(filename2);
 % nc3=cfdataset(filename3);
@@ -139,7 +139,7 @@ for kk=1:1
     
     
 %pcp=interp2(hrap_x,hrap_y,forcing,lon,lat)
- output_file1=['RCP4.5/',model,'/',yyyy,'/precip/xmrg',mm,dd,yyyy,hh1,'z.asc'];
+ output_file1=['svs6308/RCP4.5/',model,'/',yyyy,'/precip/xmrg',mm,dd,yyyy,hh1,'z.asc'];
  fid=fopen(output_file1,'wt');
  fprintf(fid,'ncols 170  \n');
  fprintf(fid,'nrows 185  \n');
@@ -151,7 +151,7 @@ for kk=1:1
  fclose(fid);
  
 
-output_file4=['RCP4.5/',model,'/',yyyy,'/temp_new/tair',mm,dd,yyyy,hh1,'z.asc'];
+output_file4=['svs6308/RCP4.5/',model,'/',yyyy,'/temp_new/tair',mm,dd,yyyy,hh1,'z.asc'];
 fid=fopen(output_file4,'wt');
 fprintf(fid,'ncols 170  \n');
 fprintf(fid,'nrows 185  \n');
